@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FizzBuzz Program</title>
+</head>
+<body>
+
+    <h2>FizzBuzz Program</h2>
+
+    <button onclick="fizzBuzz()">Run Program</button>
+
+    <p id="output"></p>
+
+    <script>
+        function fizzBuzz() {
+            let result = "";
+
+            for (let num = 1; num <= 30; num++) {
+                if (num % 3 == 0 && num % 5 == 0) {
+                    result += "FIZZBUZZ, ";
+                }
+                else if (num % 3 == 0) {
+                    result += "FIZZ, ";
+                }
+                else if (num % 5 == 0) {
+                    result += "BUZZ, ";
+                }
+                else {
+                    result += num + ", ";
+                }
+            }
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
